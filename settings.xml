@@ -1,0 +1,33 @@
+<settings>
+<servers>
+  <server>
+    <id>domain-max-maxjagger-devops-cicd-codeartifact</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>domain-max-maxjagger-devops-cicd-codeartifact</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>domain-max-maxjagger-devops-cicd-codeartifact</id>
+        <url>https://domain-max-084375545045.d.codeartifact.ap-northeast-1.amazonaws.com/maven/maxjagger-devops-cicd-codeartifact/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>domain-max-maxjagger-devops-cicd-codeartifact</id>
+    <name>domain-max-maxjagger-devops-cicd-codeartifact</name>
+    <url>https://domain-max-084375545045.d.codeartifact.ap-northeast-1.amazonaws.com/maven/maxjagger-devops-cicd-codeartifact/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
